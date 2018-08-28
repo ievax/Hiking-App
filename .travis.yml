@@ -11,3 +11,8 @@ script:
 before_script:
   - psql -c "CREATE USER hikingapp WITH PASSWORD 'welcome1';" -U postgres
   - psql -c 'create database hiking_app_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: "25b0cb76-bf7b-4a0e-a0bf-25d1deb6c3d9"
+  on: master
