@@ -1,0 +1,9 @@
+linters:
+  SelectorFormat:
+    convention: hyphenated_BEM
+
+  StringQuotes:
+    style: double_quotes
+
+  SingleLinePerProperty:
+    allow_single_line_rule_sets: false

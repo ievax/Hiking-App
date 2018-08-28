@@ -51,8 +51,13 @@ group :development, :test do
   gem 'travis'
   # Factory Bot for fixtures
   gem 'factory_bot'
-  # Rubocop for linting
+  # Rubocop for linting ruby code
   gem 'rubocop', require: false
+  gem 'rubocop-rspec'
+  # Lint HAML markdown
+  gem 'haml_lint', require: false
+  # Lint scss stylesheets
+  gem 'scss_lint', require: false
 end
 
 group :development do
