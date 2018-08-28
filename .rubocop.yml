@@ -13,6 +13,9 @@ AllCops:
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
 
+Layout/SpaceBeforeFirstArg:
+  Enabled: false
+
 Metrics/AbcSize:
   Exclude:
     - db/migrate/*.rb
@@ -67,6 +70,9 @@ Style/Documentation:
   Enabled: false
 
 Style/DoubleNegation:
+  Enabled: false
+
+Style/ExpandPathArguments:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
