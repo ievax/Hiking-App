@@ -42,13 +42,15 @@ gem 'bootsnap', '>= 1.1.0', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
+  # Pry for debugging; use by putting binding pry to stop execution
   gem 'pry-rails'
   gem 'pry-byebug'
-
+  # Rspec for tests
   gem 'rspec-rails'
-
+  # Travis for CI
   gem 'travis'
+  # Factory Bot for fixtures
+  gem 'factory_bot'
 end
 
 group :development do
