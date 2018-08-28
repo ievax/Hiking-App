@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: hiking-app_development
+  database: hiking_app_development
   username: hikingapp
   password: welcome1
 
@@ -59,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: hiking-app_test
+  database: hiking_app_test
   username: hikingapp
   password: welcome1
 
@@ -84,6 +84,6 @@ test:
 #
 production:
   <<: *default
-  database: hiking-app_production
-  username: hiking-app
+  database: hiking_app_production
+  username: hikingapp
   password: <%= ENV['HIKING-APP_DATABASE_PASSWORD'] %>
