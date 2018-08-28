@@ -51,6 +51,8 @@ group :development, :test do
   gem 'travis'
   # Factory Bot for fixtures
   gem 'factory_bot'
+  # Rubocop for linting
+  gem 'rubocop', require: false
 end
 
 group :development do
