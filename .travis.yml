@@ -5,14 +5,10 @@ postgres:
   adapter: postgresql
   database: hiking_app_test
   username: hikingapp
-  password: welcome1
 script:
   - export RAILS_ENV=test
-  - bundle exec rake db:schema:load db:test:prepare
   - bundle exec rspec
   - bundle exec rubocop
-before_script:
-  - psql -c 'create database hiking_app_test;' -U hikingapp
 deploy:
   provider: heroku
   api_key:
