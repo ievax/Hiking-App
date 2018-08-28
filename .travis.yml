@@ -1,16 +1,18 @@
 language: ruby
 rvm:
   - 2.5.1
-services:
-  - postgresql
+postgres:
+  adapter: postgresql
+  database: hiking_app_test
+  username: hikingapp
+  password: welcome1
 script:
   - export RAILS_ENV=test
-  - bundle exec rake db:create db:schema:load db:test:prepare
+  - bundle exec rake db:schema:load db:test:prepare
   - bundle exec rspec
   - bundle exec rubocop
 before_script:
-  - psql -c "CREATE USER hikingapp WITH PASSWORD 'welcome1';" -U postgres
-  - psql -c 'create database hiking_app_test;' -U postgres
+  - psql -c 'create database hiking_app_test;' -U hikingapp
 deploy:
   provider: heroku
   api_key:
