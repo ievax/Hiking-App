@@ -1,17 +1,18 @@
 language: ruby
 rvm:
-  - 2.5.1
+- 2.5.1
 postgres:
   adapter: postgresql
   database: hiking_app_test
   username: hikingapp
 script:
-  - export RAILS_ENV=test
-  - bundle exec rspec
-  - bundle exec rubocop
+- export RAILS_ENV=test
+- bundle exec rspec
+- bundle exec rubocop
 deploy:
   provider: heroku
   api_key:
-    secure: "25b0cb76-bf7b-4a0e-a0bf-25d1deb6c3d9"
-  on: master
-  app: hiking-app
+    secure: KLQGljkivZfzwyjnTOP3nsqJGztjof7BJ+uL3N+QfNaxZDaoVIXzOgeOm/cF5qGZCDrkFa4tck5I41Aw4Ns0U5QJ7EHrjmSLORaBjBG1GoPMvO6ClqmocHp2gWc7l3DQwcfiYstfRj4sis9WpNPSG87nizEFYzcaIS/Su2yddPb8t1zwmioZ2uGUwTt3oJ9gdKpf/bmiLpB5Nm+7Q49mNaO4somcGMXHg7aI3kzL7M8lxQ0plSrsTVNHIYhOnq8tUy6idPjwVlqKxXqR/sEEoZ95Vr+GxdsYf5oLvwX6hBkisS1Mfz7u+Fqn9iJCl0WNuAKfGuxFSFcYWgTlCdrGRqlDTyl26pmVX+6LgNf+HLkiAdC2EvuiuPY+Lz7dRVQOkCOydVYnvNODCKJoOoe7p8VHRVnv+XbqjClbcdU4rbEhDnVx42xijBAz60ww/YAjLS3ZBE6+v/bn/30Q+Yf7oZN49vlCSKdQZ2YYivkpGLFESayx0wgapmrRfRNMe5NbZrX4rQzyGx0vXLq8Sp0Ii4OwAL1ScejlPN8sI9BXOZyp0lp/xX4OumiXa91ONH5Vdw/orpCMGboEww3nrYlbo74Js2Cih8gTRPBXkcguHtN9nXoCKOibhTQzicEEsC9pMK2A78IYiLcfbQ/1HR6IHXhBwWHpsEG0BCBVnaGFW88=
+  app: hiking-appa
+  on:
+    repo: dnamsons/Hiking-App
