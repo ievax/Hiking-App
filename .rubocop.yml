@@ -1,6 +1,7 @@
 require: rubocop-rspec
 
 AllCops:
+  Severity: warning
   DisplayCopNames: true
   Exclude:
     - 'db/**/*'
