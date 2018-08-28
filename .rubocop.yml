@@ -2,6 +2,13 @@ require: rubocop-rspec
 
 AllCops:
   DisplayCopNames: true
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'Gemfile'
+    - '**/*.gemspec'
 
 Layout/MultilineOperationIndentation:
   EnforcedStyle: indented
