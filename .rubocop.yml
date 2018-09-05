@@ -1,0 +1,89 @@
+require: rubocop-rspec
+
+AllCops:
+  Severity: warning
+  DisplayCopNames: true
+  Exclude:
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'bin/**/*'
+    - 'vendor/**/*'
+    - 'Gemfile'
+    - '**/*.gemspec'
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/SpaceBeforeFirstArg:
+  Enabled: false
+
+Metrics/AbcSize:
+  Exclude:
+    - db/migrate/*.rb
+
+Metrics/BlockLength:
+  Exclude:
+    - lib/tasks/**/*.rake
+    - spec/**/*_spec.rb
+
+Metrics/ClassLength:
+  Max: 200
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Max: 20
+
+Metrics/ModuleLength:
+  Max: 200
+
+Rails:
+  Enabled: true
+
+RSpec/AnyInstance:
+  Enabled: false
+
+RSpec/ExampleLength:
+  Max: 20
+
+RSpec/LetSetup:
+  Enabled: false
+
+RSpec/NestedGroups:
+  Max: 5
+
+RSpec/MessageSpies:
+  EnforcedStyle: receive
+
+RSpec/MultipleExpectations:
+  Max: 20
+
+RSpec/DescribeClass:
+  Exclude:
+    - spec/features/**/*.rb
+
+Style/BlockComments:
+  Exclude:
+    - spec/spec_helper.rb
+
+Style/Documentation:
+  Enabled: false
+
+Style/DoubleNegation:
+  Enabled: false
+
+Style/EmptyMethod:
+  Enabled: false
+
+Style/ExpandPathArguments:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/SpecialGlobalVars:
+  Enabled: false
+
+Style/StderrPuts:
+  Enabled: false
